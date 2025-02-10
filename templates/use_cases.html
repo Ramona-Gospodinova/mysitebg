@@ -1,0 +1,48 @@
+{% extends "layouts/a.html" %}
+{% load static %}
+
+{% block title %}Казуси{% endblock %}
+
+{% block content %}
+<div id="services" class="services section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 offset-lg-2">
+          <div class="section-heading  wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.5s">
+            <h4 class="mt-5">Казуси <em>/Use Cases/</em></h4>
+            <img src="{% static "images/heading-line-dec.png" %}" alt="">
+            <p>Тук ще откриете реални примери и решения на различни уеб предизвикателства. Всеки казус показва проблем, анализ и ефективно решение, което може да ви помогне да подобрите вашия уеб проект.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+
+      <div class="row" id="use-case-container">
+          <!-- Филтри по тагове -->
+          <div class="tag-filter text-center mb-5">
+              <span class="tag active" data-tag="all">Всички</span>
+              {% for tag in tags %}
+                <a href="{% url 'use-cases-by-tag' tag.slug %}" class="tag" data-tag="{{ tag.slug }}">{{ tag.name }}</a>
+              {% endfor %}
+          </div>
+
+          {% for case in cases %}
+          
+          <div class="col-lg-3">
+            <div class="service-item first-service mt-5">
+              <div class="icon"></div>
+              <h4>{{ case.title }}</h4>
+              <p>{{ case.description|safe }}</p>
+              <div class="text-button">
+                <a href="{% url 'use-case-single' case.id %}">Прочети повече <i class="fa fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+          
+          {% endfor %}
+      </div>
+
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,73 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="bg">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <title>{% block title %}MysiteBG{% endblock %}</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{% static "bootstrap/css/bootstrap.min.css" %}" rel="stylesheet">
+
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static "css/custom.css" %}">
+    <link rel="stylesheet" href="{% static "css/animated.css" %}">
+    <link rel="stylesheet" href="{% static "css/owl.css" %}">
+
+  </head>
+
+<body>
+    
+  <!-- ***** Preloader Start ***** -->
+    <div id="js-preloader" class="js-preloader">
+      <div class="preloader-inner">
+        <span class="dot"></span>
+        <div class="dots">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+    <!-- ***** Preloader End ***** -->
+    
+  
+    {% include "includes/header.html" %}
+    {% block layout %}{% endblock %}
+    {% include "includes/footer.html" %}
+
+    <!-- Scripts -->
+    <script src="{% static "jquery/jquery.min.js" %}"></script>
+    <script src="{% static "bootstrap/js/bootstrap.bundle.min.js" %}"></script>
+    <script src="{% static "js/owl-carousel.js" %}"></script>
+    <script src="{% static "js/animation.js" %}"></script>
+    <script src="{% static "js/imagesloaded.js" %}"></script>
+    <script src="{% static "js/popup.js" %}"></script>
+    <script src="{% static "js/custom.js" %}"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+          {% if messages %}
+              {% for message in messages %}
+                  Toastify({
+                      text: "{{ message }}",
+                      duration: 4000,
+                      close: false,
+                      gravity: "top",
+                      position: "center",
+                  }).showToast();
+              {% endfor %}
+          {% endif %}
+      });
+  </script>
+  
+  </body>
+</html>

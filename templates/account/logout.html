@@ -1,0 +1,25 @@
+{% extends "layouts/b.html" %}
+
+{% block layout %}
+
+<div class="second-banner wow fadeIn animated">
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-lg-6 offset-lg-3 align-self-center">
+                <h1 class="text-center">Изход</h1>
+                <p class="lead mt-3 text-center">Сигурни ли сте, че искате да излезете?</p>
+                <form method="post" class="mt-4">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+
+                    <div class="d-grid gap-2 col-6 mx-auto">
+                        <button type="submit" class="btn btn-danger mt-3">Изход</button>
+                    </div>
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock layout %}

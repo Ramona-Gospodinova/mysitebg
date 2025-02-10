@@ -1,0 +1,32 @@
+{% extends "layouts/b.html" %}
+
+{% block layout %}
+
+
+<div class="second-banner wow fadeIn animated">
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-lg-6 offset-lg-3 align-self-center">
+                <h1 class="text-center">Регистрация</h1>
+                <form method="post" class="mt-4">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button type="submit" class="btn btn-primary mt-3 w-100">Регистрация</button>
+                </form>
+
+                <p class="float-end mt-2">
+                    <a href="{% url "signin" %}">Вход</a>
+                </p>
+
+                <!-- Показване на грешки -->
+                {% for error in field.errors %}
+                    <div class="error">{{ error }}</div> 
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock layout %}
+

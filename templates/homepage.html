@@ -1,0 +1,536 @@
+{% extends "layouts/a.html" %}
+{% load static %}
+
+{% block content %}
+<div class="main-banner wow fadeIn" id="top" data-wow-duration="1s" data-wow-delay="0.5s">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="row">
+          <div class="col-lg-6 align-self-center">
+            <div class="left-content show-up header-text wow fadeInLeft" data-wow-duration="1s" data-wow-delay="1s">
+              <div class="row">
+                <div class="col-lg-12">
+                  <h2>Експертни решения за вашите уеб проекти</h2>
+                  <p>Над 100+ успешно решени казуса в уеб разработката. Споделете своето предизвикателство и получете професионално решение от нашия екип.</p>
+                </div>
+                <div class="col-lg-12">
+                  <div class="white-button first-button scroll-to-section">
+                    <a href="#contact">
+                      <i class="fas fa-paper-plane me-2"></i>
+                      Изпратете казус
+                    </a>
+                  </div>
+                  <div class="white-button scroll-to-section">
+                    <a href="#contact">
+                      <i class="fas fa-comments me-2"></i>
+                      Безплатна консултация
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="right-image wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.5s">
+              <img src="{% static "images/main-banner.png" %}" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Услуги и решения -->
+<div id="services" class="services section">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 offset-lg-2">
+        <div class="section-heading wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.5s">
+          <h4>Решения с <em>добавена стойност</em></h4>
+          <img src="{% static "images/heading-line-dec.png" %}" alt="">
+          <p>Предлагаме професионални решения за вашия бизнес, съчетавайки експертиза с устойчиво развитие</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3">
+        <div class="service-item first-service">
+          <div class="icon">
+            <i class="fas fa-code fa-3x text-primary mb-3"></i>
+          </div>
+          <h4>Уеб разработка</h4>
+          <p>Създаване и поддръжка на модерни уеб приложения</p>
+          <ul class="list-unstyled service-features">
+            <li><i class="fas fa-check text-success me-2"></i>Съвременни технологии</li>
+            <li><i class="fas fa-check text-success me-2"></i>Responsive дизайн</li>
+            <li><i class="fas fa-check text-success me-2"></i>Мащабируеми решения</li>
+          </ul>
+          <div class="text-button">
+            <a href="#">Научете повече <i class="fa fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-lg-3">
+        <div class="service-item second-service">
+          <div class="icon">
+            <i class="fas fa-tachometer-alt fa-3x text-primary mb-3"></i>
+          </div>
+          <h4>Оптимизация</h4>
+          <p>Подобряване на производителността и ефективността</p>
+          <ul class="list-unstyled service-features">
+            <li><i class="fas fa-check text-success me-2"></i>Бързодействие</li>
+            <li><i class="fas fa-check text-success me-2"></i>Оптимизация на код</li>
+            <li><i class="fas fa-check text-success me-2"></i>Подобрена сигурност</li>
+          </ul>
+          <div class="text-button">
+            <a href="#">Научете повече <i class="fa fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-lg-3">
+        <div class="service-item third-service">
+          <div class="icon">
+            <i class="fas fa-headset fa-3x text-primary mb-3"></i>
+          </div>
+          <h4>Техническа поддръжка</h4>
+          <p>Надеждна поддръжка и мониторинг 24/7</p>
+          <ul class="list-unstyled service-features">
+            <li><i class="fas fa-check text-success me-2"></i>Бързи решения</li>
+            <li><i class="fas fa-check text-success me-2"></i>Проактивен мониторинг</li>
+            <li><i class="fas fa-check text-success me-2"></i>Архивиране на данни</li>
+          </ul>
+          <div class="text-button">
+            <a href="#">Научете повече <i class="fa fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-lg-3">
+        <div class="service-item fourth-service">
+          <div class="icon">
+            <i class="fas fa-sync-alt fa-3x text-primary mb-3"></i>
+          </div>
+          <h4>Развитие на проекти</h4>
+          <p>Поддръжка и надграждане на съществуващи уеб системи</p>
+          <ul class="list-unstyled service-features">
+            <li><i class="fas fa-check text-success me-2"></i>Нови функционалности</li>
+            <li><i class="fas fa-check text-success me-2"></i>Актуализации</li>
+            <li><i class="fas fa-check text-success me-2"></i>Технически одит</li>
+          </ul>
+          <div class="text-button">
+            <a href="#">Научете повече <i class="fa fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Секция с въздействие -->
+    <div class="row mt-5">
+      <div class="col-lg-8 offset-lg-2 text-center">
+        <div class="impact-section p-4">
+          <h5 class="mb-4">Нашите постижения</h5>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="impact-item">
+                <h3 class="text-primary">300%</h3>
+                <p>По-бързи уеб приложения</p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="impact-item">
+                <h3 class="text-primary">99.9%</h3>
+                <p>Време на работа</p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="impact-item">
+                <h3 class="text-primary">50%</h3>
+                <p>По-ниски разходи</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="about" class="about-us section">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 align-self-center">
+        <div class="section-heading">
+          <h4>За нашата <em>експертиза</em> и подход</h4>
+          <img src="{% static "images/heading-line-dec.png" %}" alt="">
+          <p>С опит в уеб разработката, ние сме специализирани в създаването на ефективни решения за технически предизвикателства.</p>
+        </div>
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="box-item">
+              <h4><a href="#">Анализ на проблеми</a></h4>
+              <p>Задълбочен технически анализ на всеки казус</p>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="box-item">
+              <h4><a href="#">Експертна поддръжка</a></h4>
+              <p>Бързи и ефективни решения на проблеми</p>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="box-item">
+              <h4><a href="#">Оптимизация</a></h4>
+              <p>Подобряване на производителността</p>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="box-item">
+              <h4><a href="#">Развитие</a></h4>
+              <p>Надграждане на функционалности</p>
+            </div>
+          </div>
+          <div class="col-lg-12">
+            <p>Нашият екип от опитни разработчици е готов да поеме предизвикателството на вашия проект. Предлагаме индивидуален подход и внимание към детайла при всеки казус.</p>
+            <div class="gradient-button">
+              <a href="#">Безплатна консултация</a>
+            </div>
+            <span>*Без обвързващи условия</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="right-image">
+          <img src="{% static "images/about-right-dec.png" %}" alt="За нас">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="clients" class="the-clients">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 offset-lg-2">
+        <div class="section-heading">
+          <h4>Доверието на <em>нашите клиенти</em></h4>
+          <img src="{% static "images/heading-line-dec.png" %}" alt="">
+          <p>Вижте какво споделят клиентите за работата с нас и решенията, които им предоставихме</p>
+        </div>
+      </div>
+      <div class="col-lg-12">
+        <div class="naccs">
+          <div class="grid">
+            <div class="row">
+              <div class="col-lg-7 align-self-center">
+                <div class="menu">
+                  <div class="first-thumb active">
+                    <div class="thumb">
+                      <div class="row">
+                        <div class="col-lg-4 col-sm-4 col-12">
+                          <h4>David Martino Co</h4>
+                          <span class="date">30 November 2021</span>
+                        </div>
+                        <div class="col-lg-4 col-sm-4 d-none d-sm-block">
+                          <span class="category">Financial Apps</span>
+                        </div>
+                        <div class="col-lg-4 col-sm-4 col-12">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <span class="rating">4.8</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="thumb">
+                      <div class="row">
+                        <div class="col-lg-4 col-sm-4 col-12">
+                          <h4>Jake Harris Nyo</h4>
+                          <span class="date">29 November 2021</span>
+                        </div>
+                        <div class="col-lg-4 col-sm-4 d-none d-sm-block">
+                          <span class="category">Digital Business</span>
+                        </div>
+                        <div class="col-lg-4 col-sm-4 col-12">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <span class="rating">4.5</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="thumb">
+                      <div class="row">
+                        <div class="col-lg-4 col-sm-4 col-12">
+                          <h4>May Catherina</h4>
+                          <span class="date">27 November 2021</span>
+                        </div>
+                        <div class="col-lg-4 col-sm-4 d-none d-sm-block">
+                          <span class="category">Business &amp; Economics</span>
+                        </div>
+                        <div class="col-lg-4 col-sm-4 col-12">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <span class="rating">4.7</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="thumb">
+                      <div class="row">
+                        <div class="col-lg-4 col-sm-4 col-12">
+                          <h4>Random User</h4>
+                          <span class="date">24 November 2021</span>
+                        </div>
+                        <div class="col-lg-4 col-sm-4 d-none d-sm-block">
+                          <span class="category">New App Ecosystem</span>
+                        </div>
+                        <div class="col-lg-4 col-sm-4 col-12">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <span class="rating">3.9</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="last-thumb">
+                    <div class="thumb">
+                      <div class="row">
+                        <div class="col-lg-4 col-sm-4 col-12">
+                          <h4>Mark Amber Do</h4>
+                          <span class="date">21 November 2021</span>
+                        </div>
+                        <div class="col-lg-4 col-sm-4 d-none d-sm-block">
+                          <span class="category">Web Development</span>
+                        </div>
+                        <div class="col-lg-4 col-sm-4 col-12">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <span class="rating">4.3</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div> 
+              <div class="col-lg-5">
+                <ul class="nacc">
+                  <li class="active">
+                    <div>
+                      <div class="thumb">
+                        <div class="row">
+                          <div class="col-lg-12">
+                            <div class="client-content">
+                              <img src="{% static "images/quote.png" %}" alt="">
+                              <p>"Lorem ipsum dolor sit amet, consectetur adpiscing elit, sed do eismod tempor idunte ut labore et dolore magna aliqua darwin kengan
+                                lorem ipsum dolor sit amet, consectetur picing elit massive big blasta."</p>
+                            </div>
+                            <div class="down-content">
+                              <img src="{% static "images/client-image.jpg" %}" alt="">
+                              <div class="right-content">
+                                <h4>David Martino</h4>
+                                <span>CEO of David Company</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <div class="thumb">
+                        <div class="row">
+                          <div class="col-lg-12">
+                            <div class="client-content">
+                              <img src="{% static "images/quote.png" %}" alt="">
+                              <p>"CTO, Lorem ipsum dolor sit amet, consectetur adpiscing elit, sed do eismod tempor idunte ut labore et dolore magna aliqua darwin kengan
+                                lorem ipsum dolor sit amet, consectetur picing elit massive big blasta."</p>
+                            </div>
+                            <div class="down-content">
+                              <img src="{% static "images/client-image.jpg" %}" alt="">
+                              <div class="right-content">
+                                <h4>Jake H. Nyo</h4>
+                                <span>CTO of Digital Company</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <div class="thumb">
+                        <div class="row">
+                          <div class="col-lg-12">
+                            <div class="client-content">
+                              <img src="{% static "images/quote.png" %}" alt="">
+                              <p>"May, Lorem ipsum dolor sit amet, consectetur adpiscing elit, sed do eismod tempor idunte ut labore et dolore magna aliqua darwin kengan
+                                lorem ipsum dolor sit amet, consectetur picing elit massive big blasta."</p>
+                            </div>
+                            <div class="down-content">
+                              <img src="{% static "images/client-image.jpg" %}" alt="">
+                              <div class="right-content">
+                                <h4>May C.</h4>
+                                <span>Founder of Catherina Co.</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <div class="thumb">
+                        <div class="row">
+                          <div class="col-lg-12">
+                            <div class="client-content">
+                              <img src="{% static "images/quote.png" %}" alt="">
+                              <p>"Lorem ipsum dolor sit amet, consectetur adpiscing elit, sed do eismod tempor idunte ut labore et dolore magna aliqua darwin kengan
+                                lorem ipsum dolor sit amet, consectetur picing elit massive big blasta."</p>
+                            </div>
+                            <div class="down-content">
+                              <img src="{% static "images/client-image.jpg" %}" alt="">
+                              <div class="right-content">
+                                <h4>Random Staff</h4>
+                                <span>Manager, Digital Company</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <div class="thumb">
+                        <div class="row">
+                          <div class="col-lg-12">
+                            <div class="client-content">
+                              <img src="{% static "images/quote.png" %}" alt="">
+                              <p>"Mark, Lorem ipsum dolor sit amet, consectetur adpiscing elit, sed do eismod tempor idunte ut labore et dolore magna aliqua darwin kengan
+                                lorem ipsum dolor sit amet, consectetur picing elit massive big blasta."</p>
+                            </div>
+                            <div class="down-content">
+                              <img src="{% static "images/client-image.jpg" %}" alt="">
+                              <div class="right-content">
+                                <h4>Mark Am</h4>
+                                <span>CTO, Amber Do Company</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>          
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- <div id="pricing" class="pricing-tables">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 offset-lg-2">
+        <div class="section-heading">
+          <h4>We Have The Best Pre-Order <em>Prices</em> You Can Get</h4>
+          <img src="{% static "images/heading-line-dec.png" %}" alt="">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eismod tempor incididunt ut labore et dolore magna.</p>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="pricing-item-regular">
+          <span class="price">$12</span>
+          <h4>Standard Plan App</h4>
+          <div class="icon">
+            <img src="{% static "images/pricing-table-01.png" %}" alt="">
+          </div>
+          <ul>
+            <li>Lorem Ipsum Dolores</li>
+            <li>20 TB of Storage</li>
+            <li class="non-function">Life-time Support</li>
+            <li class="non-function">Premium Add-Ons</li>
+            <li class="non-function">Fastest Network</li>
+            <li class="non-function">More Options</li>
+          </ul>
+          <div class="border-button">
+            <a href="#">Purchase This Plan Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="pricing-item-pro">
+          <span class="price">$25</span>
+          <h4>Business Plan App</h4>
+          <div class="icon">
+            <img src="{% static "images/pricing-table-01.png" %}" alt="">
+          </div>
+          <ul>
+            <li>Lorem Ipsum Dolores</li>
+            <li>50 TB of Storage</li>
+            <li>Life-time Support</li>
+            <li>Premium Add-Ons</li>
+            <li class="non-function">Fastest Network</li>
+            <li class="non-function">More Options</li>
+          </ul>
+          <div class="border-button">
+            <a href="#">Purchase This Plan Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="pricing-item-regular">
+          <span class="price">$66</span>
+          <h4>Premium Plan App</h4>
+          <div class="icon">
+            <img src="{% static "images/pricing-table-01.png" %}" alt="">
+          </div>
+          <ul>
+            <li>Lorem Ipsum Dolores</li>
+            <li>120 TB of Storage</li>
+            <li>Life-time Support</li>
+            <li>Premium Add-Ons</li>
+            <li>Fastest Network</li>
+            <li>More Options</li>
+          </ul>
+          <div class="border-button">
+            <a href="#">Purchase This Plan Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>  -->
+
+{% endblock %}
+

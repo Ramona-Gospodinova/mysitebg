@@ -1,0 +1,176 @@
+{% extends "layouts/a.html" %}
+{% load static %}
+
+{% block content %}
+<div id="use-case" class="use-case section">
+    <div class="container">
+
+
+        <!-- Back Link -->
+        <div class="row mb-4">
+            <div class="col-lg-8 mx-auto">
+                <a href="{% url 'cases' %}" class="text-decoration-none d-inline-flex align-items-center back-link">
+                    <i class="la la-arrow-left me-2"></i>
+                    <span>Всички казуси</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Case Section -->
+        <div class="row mb-5">
+            <div class="col-lg-8 mx-auto">
+                <div class="card shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="d-flex align-items-start mb-4">
+                            <!-- Case Image -->
+                            <div class="case-image me-4">
+                                <img src="https://api.dicebear.com/7.x/shapes/svg?seed={{ case.title|urlencode }}&backgroundColor=c7d2fe" 
+                                     alt="Case illustration" 
+                                     class="rounded-3"
+                                     width="120" 
+                                     height="120">
+                            </div>
+                            <div class="flex-grow-1">
+                                <div class="d-flex align-items-center mb-2">
+                                    <span class="badge bg-success rounded-pill px-3">Казус</span>
+                                    {% if case.created_at %}
+                                        <small class="text-muted ms-3">{{ case.created_at|date:"d.m.Y" }}</small>
+                                    {% endif %}
+                                </div>
+                                <h2 class="card-title">{{ case.title }}</h2>
+                            </div>
+                        </div>
+                        <div class="card-text mb-4">
+                            {{ case.description|safe }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Добавяме CTA секция -->
+        <div class="row mb-5">
+            <div class="col-lg-8 mx-auto">
+                <div class="card bg-light">
+                    <div class="card-body p-4 text-center">
+                        <h4 class="mb-3">Имате подобен казус?</h4>
+                        <p class="mb-4">Нашият екип от опитни разработчици може да ви помогне с всякакви предизвикателства в уеб разработката</p>
+                        <a href="" class="btn btn-light">Свържете се с нас</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Solution Section -->
+        {% if selected_solution %}
+        <div class="row" id="solution">
+            <div class="col-lg-8 mx-auto mt-4">
+                <div class="card shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="d-flex align-items-start mb-4">
+                            <!-- Solution Image -->
+                            <div class="solution-image me-4">
+                                <img src="https://api.dicebear.com/7.x/identicon/svg?seed={{ selected_solution.title|urlencode }}&backgroundColor=bfdbfe" 
+                                     alt="Solution illustration" 
+                                     class="rounded-3"
+                                     width="120" 
+                                     height="120">
+                            </div>
+                            <div class="flex-grow-1">
+                                <div class="d-flex align-items-center mb-2">
+                                    <span class="badge bg-primary rounded-pill px-3">Решение</span>
+                                </div>
+                                <h3 class="card-title">{{ selected_solution.title }}</h3>
+                            </div>
+                        </div>
+                        
+                        <!-- Description -->
+                        <div class="card-text mb-4">
+                            {{ selected_solution.description|safe }}
+                        </div>
+
+                        <!-- Steps -->
+                        {% if selected_solution.steps %}
+                        <div class="steps-section mt-4">
+                            <h4 class="mb-3">
+                                <i class="la la-list-ol text-primary me-2"></i>
+                                Стъпки за изпълнение
+                            </h4>
+                            <div class="card-text">
+                                {{ selected_solution.steps|safe }}
+                            </div>
+                        </div>
+                        {% endif %}
+
+                        <!-- Video -->
+                        {% if selected_solution.video_url %}
+                        <div class="video-section mt-4">
+                            <h4 class="mb-3">
+                                <i class="la la-play-circle text-primary me-2"></i>
+                                Видео демонстрация
+                            </h4>
+                            <div class="ratio ratio-16x9">
+                                <iframe src="{{ selected_solution.video_url }}" 
+                                        allowfullscreen></iframe>
+                            </div>
+                        </div>
+                        {% endif %}
+
+                        <!-- Author info if needed -->
+                        {% if selected_solution.created_by %}
+                        <div class="mt-4 pt-3 border-top">
+                            <small class="text-muted">
+                                <i class="la la-user me-1"></i>
+                                Автор: {{ selected_solution.created_by.username }}
+                            </small>
+                        </div>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+</div>
+
+{% block extra_css %}
+<style>
+    .use-case {
+        background-color: #f8f9fa;
+    }
+    .card {
+        border: none;
+        border-radius: 1rem;
+    }
+    .steps-section {
+        background-color: #f8f9fa;
+        padding: 1.5rem;
+        border-radius: 0.5rem;
+    }
+    .badge {
+        font-weight: 500;
+        font-size: 0.9rem;
+    }
+    .case-image img,
+    .solution-image img {
+        box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+    }
+    .steps-section {
+        position: relative;
+        background: linear-gradient(to right bottom, #f8f9fa, #ffffff);
+        border: 1px solid #e9ecef;
+    }
+    .card-text {
+        line-height: 1.6;
+    }
+    h4 {
+        color: #444;
+        font-weight: 600;
+    }
+    .la {
+        font-size: 1.2em;
+    }
+</style>
+{% endblock %}
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends "layouts/a.html" %}
+{% load static %}
+
+{% block content %}
+<div id="use-case" class="use-case section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2">
+                <div class="section-heading  wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.5s">
+                    <h4>Контакти</h4>
+                    <img src="{% static "images/heading-line-dec.png" %}" alt="">
+                    <p>Нашата команда е на разположение за всякакви въпроси и заявки. Моля, използвайте формуляра по-долу за връзка с нас.</p>
+                    <p>Ако имате въпроси или нужда от помощ, не се колебайте да ни пишете.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% include "components/contact-form.html" %}
+{% endblock %}
