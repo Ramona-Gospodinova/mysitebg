@@ -9,9 +9,12 @@ https://docs.djangoproject.com/en/5.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.1/ref/settings/
 """
-
-import os
+from dotenv import load_dotenv
+import os, ast
 from pathlib import Path
+
+load_dotenv()  # Това трябва да е преди четенето на environment variables
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -23,10 +26,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-e&nf=_df#673p%h-#piaqv0o5$(%!xeb2g5*y(ghfmf1h8tpfz'
 
-# SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['*', 'localhost', '127.0.0.1']
 
 
 # Application definition
@@ -37,11 +39,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    
 
     # Third-party Apps
     'allauth',
     'allauth.account',
     'tinymce',
+    'django_recaptcha',
 
     # Custom Apps
     'apps.accounts',
@@ -116,6 +120,28 @@ LOGGING = {
     },
 }
 
+# Email settings:
+EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+EMAIL_HOST = os.environ.get("EMAIL_HOST")
+EMAIL_PORT = 465
+EMAIL_USE_SSL = True
+EMAIL_USE_TLS = False
+EMAIL_HOST_USER = os.getenv("EMAIL_HOST_USER")
+EMAIL_HOST_PASSWORD = os.getenv("EMAIL_HOST_PASSWORD")
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+DEFAULT_TO_EMAIL = os.getenv("DEFAULT_TO_EMAIL")
+if DEFAULT_TO_EMAIL:
+    try:
+        DEFAULT_TO_EMAIL = ast.literal_eval(DEFAULT_TO_EMAIL)  # Преобразува низа в списък
+    except (ValueError, SyntaxError):
+        DEFAULT_TO_EMAIL = [email.strip() for email in DEFAULT_TO_EMAIL.split(",")]
+else:
+    DEFAULT_TO_EMAIL = []
+
+# Recaptcha settings:
+RECAPTCHA_PUBLIC_KEY = os.getenv("RECAPTCHA_PUBLIC_KEY")
+RECAPTCHA_PRIVATE_KEY = os.getenv("RECAPTCHA_PRIVATE_KEY")
+
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
@@ -164,9 +190,6 @@ MEDIA_ROOT = BASE_DIR / 'media'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
-# Email settings: TODO: Only in dev.  Change this to a real email backend
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 # Account settings:
 ACCOUNT_AUTHENTICATION_METHOD = 'email'

@@ -3,8 +3,6 @@ from .forms import CustomUserCreationForm, CustomAuthenticationForm
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
 
-# Create your views here.
-
 
 def home_view(request):
     return render(request, 'homepage.html')

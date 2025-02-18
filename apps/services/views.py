@@ -1,6 +1,9 @@
-from django.shortcuts import render, get_list_or_404, get_object_or_404
+from django.shortcuts import render, redirect, get_list_or_404, get_object_or_404
+from .forms import ContactForm
 from .models import Case, Tag
-
+from django.contrib import messages
+from django.core.mail import send_mail
+from a_core.settings import DEFAULT_FROM_EMAIL, DEFAULT_TO_EMAIL
 
 def cases_view(request):
     cases = get_list_or_404(Case)
@@ -29,3 +32,30 @@ def use_case_by_tag_view(request, tag_slug):
         'cases': cases,
         'tags': tags,
     })
+
+def contacts_view(request):
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            name = form.cleaned_data["name"]
+            email = form.cleaned_data["email"]
+            message = form.cleaned_data["message"]
+
+            try:
+                send_mail(
+                    f"Ново съобщение от {name}",
+                    message,
+                    DEFAULT_FROM_EMAIL,
+                    DEFAULT_TO_EMAIL,
+                    fail_silently=False,
+                )
+                print(f"Съобщение изпратено на {DEFAULT_TO_EMAIL}")
+                messages.success(request, 'Съобщението ви беше изпратено успешно.')
+                form = ContactForm()
+            except Exception as e:
+                pass
+
+            return redirect('contacts')
+    else:
+        form = ContactForm()
+    return render(request, 'contacts.html', {'form': form})

@@ -8,7 +8,7 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-8 offset-lg-2">
-          <div class="section-heading  wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.5s">
+          <div class="section-heading wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.5s">
             <h4 class="mt-5">Казуси <em>/Use Cases/</em></h4>
             <img src="{% static "images/heading-line-dec.png" %}" alt="">
             <p>Тук ще откриете реални примери и решения на различни уеб предизвикателства. Всеки казус показва проблем, анализ и ефективно решение, което може да ви помогне да подобрите вашия уеб проект.</p>
@@ -16,8 +16,8 @@
         </div>
       </div>
     </div>
+    
     <div class="container">
-
       <div class="row" id="use-case-container">
           <!-- Филтри по тагове -->
           <div class="tag-filter text-center mb-5">
@@ -27,8 +27,7 @@
               {% endfor %}
           </div>
 
-          {% for case in cases %}
-          
+          {% for case in cases %}  
           <div class="col-lg-3">
             <div class="service-item first-service mt-5">
               <div class="icon"></div>
@@ -39,10 +38,8 @@
               </div>
             </div>
           </div>
-          
           {% endfor %}
       </div>
-
     </div>
 </div>
 {% endblock %}
