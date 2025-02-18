@@ -44,12 +44,11 @@ def contacts_view(request):
             try:
                 send_mail(
                     f"Ново съобщение от {name}",
-                    message,
+                    message + f"\n\nИмейл: {email}",
                     DEFAULT_FROM_EMAIL,
                     DEFAULT_TO_EMAIL,
                     fail_silently=False,
                 )
-                print(f"Съобщение изпратено на {DEFAULT_TO_EMAIL}")
                 messages.success(request, 'Съобщението ви беше изпратено успешно.')
                 form = ContactForm()
             except Exception as e:

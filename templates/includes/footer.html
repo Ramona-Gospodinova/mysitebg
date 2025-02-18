@@ -3,30 +3,6 @@
 <footer id="contacts">
   <div class="container">
     <div class="row">
-      <div class="col-lg-8 offset-lg-2">
-        <div class="section-heading">
-          <h4>Имате технически казус?</h4>
-        </div>
-      </div>
-      <!-- CTA секция -->
-      <div class="col-lg-6 offset-lg-3">
-        <form id="search" action="#" method="GET">
-          <div class="row">
-            <div class="col-lg-6 col-sm-6">
-              <fieldset>
-                <input type="address" name="address" class="email" placeholder="Email Address..." autocomplete="on" required>
-              </fieldset>
-            </div>
-            <div class="col-lg-6 col-sm-6">
-              <fieldset>
-                <button type="submit" class="main-button">Изпратете запитване <i class="fa fa-angle-right"></i></button>
-              </fieldset>
-            </div>
-          </div>
-        </form>
-      </div>
-    </div>
-    <div class="row">
       <div class="col-lg-3">
         <div class="footer-widget">
           <h4>Контакти</h4>
@@ -52,6 +28,7 @@
             <li><a href="#">Казуси</a></li>
             <li><a href="#">Уеб програмиране</a></li>
             <li><a href="#">Поверителност</a></li>
+            <li><a href="{% url 'contacts' %}">Контакти</a></li>
           </ul>
         </div>
       </div>

@@ -1068,11 +1068,6 @@ Services Styles
   position: relative;
 }
 
-services10px;
-margin-left: 18%;
-margin-right: 18%;
-}
-
 .services .container-fluid {
   padding-left: 65px;
   padding-right: 65px;
@@ -1144,6 +1139,7 @@ margin-right: 18%;
   margin-bottom: 20px;
 
   display: -webkit-box;
+  line-clamp: 4;
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
   overflow: hidden;
@@ -1686,7 +1682,7 @@ footer #search input {
   width: 100%;
 }
 
-footer #search button {
+footer .main-button {
   height: 46px;
   border-radius: 23px;
   border: 1px solid #fff;
@@ -1696,7 +1692,7 @@ footer #search button {
   transition: all .5s;
 }
 
-footer #search button:hover {
+footer .main-button:hover {
   background-color: #fff;
   color: #4b8ef1;
 }
@@ -1878,7 +1874,6 @@ a.btn_red {
 
   padding: 5px 10px;
   margin-right: 10px;
-  float: left;
   color: #FFF;
   font-size: 16px;
   text-align: center;

@@ -18,7 +18,7 @@ class ContactForm(forms.Form):
     name = forms.CharField(label='Име', max_length=100)
     email = forms.EmailField(label='Имейл')
     message = forms.CharField(label='Съобщение', widget=forms.Textarea)
-    captcha = ReCaptchaField(widget=ReCaptchaV2Checkbox())
+    # captcha = ReCaptchaField(widget=ReCaptchaV2Checkbox())
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
