@@ -2,535 +2,279 @@
 {% load static %}
 
 {% block content %}
-<div class="main-banner wow fadeIn" id="top" data-wow-duration="1s" data-wow-delay="0.5s">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-12">
-        <div class="row">
-          <div class="col-lg-6 align-self-center">
-            <div class="left-content show-up header-text wow fadeInLeft" data-wow-duration="1s" data-wow-delay="1s">
-              <div class="row">
-                <div class="col-lg-12">
-                  <h2>Експертни решения за вашите уеб проекти</h2>
-                  <p>Над 100+ успешно решени казуса в уеб разработката. Споделете своето предизвикателство и получете професионално решение от нашия екип.</p>
+
+<!-- Услуги Start -->
+<div class="container-fluid service py-5" id="services">
+    <div class="container pb-5">
+        <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+            <h4 class="text-primary">Нашите услуги</h4>
+            <h1 class="display-5 mb-4">Ние предлагаме най-добрите услуги</h1>
+            <p class="mb-0">
+                Ние предлагаме висококачествени уеб услуги, насочени към удовлетворяване на вашите нужди и цели. 
+            </p>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.2s">
+                <div class="service-item">
+                    <div class="service-img">
+                        <img src="{% static 'img/service-3.jpg' %}" class="img-fluid rounded-top w-100" alt="Image">
+                    </div>
+                    <div class="rounded-bottom p-4">
+                        <a href="#" class="h4 d-inline-block mb-4">Изработка на уебсайтове и приложения</a>
+                        <p class="mb-4">
+                            Ние предлагаме уеб разработка, за да ви помогнем да създадете уебсайтове, които да бъдат привлекателни и ефективни. 
+                        </p>
+                        <a class="btn btn-primary rounded-pill py-2 px-4" href="{% url 'contacts' %}">Научете повече</a>
+                    </div>
                 </div>
-                <div class="col-lg-12">
-                  <div class="white-button first-button scroll-to-section">
-                    <a href="{% url 'contacts' %}">
-                      <i class="fas fa-paper-plane me-2"></i>
-                      Изпратете казус
+            </div>
+            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.2s">
+                <div class="service-item">
+                    <div class="service-img">
+                        <img src="{% static 'img/service-4.jpg' %}" class="img-fluid rounded-top w-100" alt="Image">
+                    </div>
+                    <div class="rounded-bottom p-4">
+                        <a href="#" class="h4 d-inline-block mb-4">Поддръжка и оптимизация</a>
+                        <p class="mb-4">
+                            Ние предлагаме поддръжка и оптимизация, за да ви помогнем да поддържате вашите уебсайтове и приложения. 
+                        </p>
+                        <a class="btn btn-primary rounded-pill py-2 px-4" href="{% url 'contacts' %}">Научете повече</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.6s">
+                <div class="service-item">
+                    <div class="service-img">
+                        <img src="{% static 'img/service-6.jpg' %}" class="img-fluid rounded-top w-100" alt="Image">
+                    </div>
+                    <div class="rounded-bottom p-4">
+                        <a href="#" class="h4 d-inline-block mb-4">Индивидуални проекти</a>
+                        <p class="mb-4">
+                            Ние предлагаме индивидуални проекти, за да ви помогнем да създадете уебсайтове, които да бъдат привлекателни и ефективни. 
+                        </p>
+                        <a class="btn btn-primary rounded-pill py-2 px-4" href="{% url 'contacts' %}">Научете повече</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Услуги End -->
+
+<!-- Цели Start -->
+<div class="container-fluid feature pb-5" id="goals">
+    <div class="container pb-5">
+        <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+            <h4 class="text-primary">Нашите цели</h4>
+            <h1 class="display-5 mb-4">Уеб технологии като сила за добро</h1>
+            <p class="mb-0">Вярваме, че технологиите могат да бъдат не просто инструмент, а сила за добро. 
+                Нашата мисия е да свързваме бизнеси, идеи и хора чрез иновативни уеб решения, които не само помагат на организациите да растат, но и допринасят за една по-смислена и отговорна дигитална среда.
+            </p>
+        </div>
+        <div class="row g-4 pb-5">
+            <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.2s">
+                <div class="feature-item p-4">
+                    <div class="feature-icon p-4 mb-4">
+                        <i class="fas fa-chart-line fa-4x text-primary"></i>
+                    </div>
+                    <h4>Свързване на хора и идеи</h4>
+                    <p class="mb-4">Насърчаваме сътрудничеството между бизнеси, креативни умове и организации с обща визия за положителна промяна.
+                    </p>
+                    <a class="btn btn-primary rounded-pill py-2 px-4" href="{% url 'contacts' %}">Предложете идея</a>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.4s">
+                <div class="feature-item p-4">
+                    <div class="feature-icon p-4 mb-4">
+                        <i class="fas fa-university fa-4x text-primary"></i>
+                    </div>
+                    <h4>Уеб решения с мисия</h4>
+                    <p class="mb-4">Създаваме модерни дигитални продукти, които не само работят ефективно, но и подкрепят важни каузи.
+                    </p>
+                    <a class="btn btn-primary rounded-pill py-2 px-4" href="{% url 'contacts' %}">Предложете кауза</a>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.6s">
+                <div class="feature-item p-4">
+                    <div class="feature-icon p-4 mb-4">
+                        <i class="fas fa-file-alt fa-4x text-primary"></i>
+                    </div>
+                    <h4>Технологии в полза на обществото</h4>
+                    <p class="mb-4">Вярваме, че интернет пространството може да бъде двигател за социална отговорност и благотворителност.
+                    </p>
+                    <a class="btn btn-primary rounded-pill py-2 px-4" href="{% url 'contacts' %}">Предложете инициатива</a>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.8s">
+                <div class="feature-item p-4">
+                    <div class="feature-icon p-4 mb-4">
+                        <i class="fas fa-hand-holding-usd fa-4x text-primary"></i>
+                    </div>
+                    <h4>Дигитална стойност с човешко лице</h4>
+                    <p class="mb-4">
+                        Всеки проект е възможност за изграждане на доверие, ангажираност и дългосрочно въздействие.
+                    </p>
+                    <a class="btn btn-primary rounded-pill py-2 px-4" href="{% url 'contacts' %}">Предложете проект</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+            <p class="mb-0">
+                Подкрепяме каузи, които правят реална промяна — от социални инициативи до грижа за животните. 
+                Всеки проект, всяка уеб страница, всяка услуга, която предлагаме, може да бъде част от по-голяма цел: изграждане на стойност, вдъхновение и въздействие.                    </p>
+        </div>
+    </div>
+</div>
+<!-- Цели End -->
+
+
+<!-- Нашите предимства Start -->
+<div class="container-fluid offer-section pb-5" id="offer">
+    <div class="container pb-5">
+        <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+            <h4 class="text-primary">Нашите предимства</h4>
+            <h1 class="display-5 mb-4">Работим с кауза, изграждаме с грижа</h1>
+            <p class="mb-0">Създаваме уеб решения с характер, стойност и сърце.</p>
+        </div>
+        <div class="row g-5 align-items-center">
+            <div class="col-xl-5 wow fadeInLeft" data-wow-delay="0.2s">
+                <div class="nav nav-pills bg-light rounded p-5">
+                    <a class="accordion-link p-4 active mb-4" data-bs-toggle="pill" href="#collapseOne">
+                        <h5 class="mb-0">Индивидуален подход</h5>
                     </a>
-                  </div>
-                  <div class="white-button scroll-to-section">
-                    <a href="{% url 'contacts' %}">
-                      <i class="fas fa-comments me-2"></i>
-                      Безплатна консултация
+                    <a class="accordion-link p-4 mb-4" data-bs-toggle="pill" href="#collapseTwo">
+                        <h5 class="mb-0">Фокус върху каузи</h5>
                     </a>
-                  </div>
+                    <a class="accordion-link p-4 mb-4" data-bs-toggle="pill" href="#collapseThree">
+                        <h5 class="mb-0">Партньорство, не просто услуга</h5>
+                    </a>
+                    <a class="accordion-link p-4 mb-0" data-bs-toggle="pill" href="#collapseFour">
+                        <h5 class="mb-0">Креативност с цел</h5>
+                    </a>
                 </div>
-              </div>
             </div>
-          </div>
-          <div class="col-lg-6">
-            <div class="right-image wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.5s">
-              <img src="{% static "images/main-banner.png" %}" alt="">
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+            <div class="col-xl-7 wow fadeInRight" data-wow-delay="0.4s">
+                <div class="tab-content">
+                    <div id="collapseOne" class="tab-pane fade show p-0 active">
+                        <div class="row g-4">
+                            <div class="col-md-7">
+                                <img src="{% static 'img/offer-1.jpg' %}" class="img-fluid w-100 rounded" alt="">
+                            </div>
+                            <div class="col-md-5">
+                                <h1 class="display-5 mb-4">Без шаблони</h1>
+                                <p class="mb-4">Всяко решение е съобразено с вашите цели, бранд и аудитория. Без шаблони – само реална стойност.
+                                </p>
+                                <a class="btn btn-primary rounded-pill py-2 px-4" href="{% url 'contacts' %}">Започнете сега</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="collapseTwo" class="tab-pane fade show p-0">
+                        <div class="row g-4">
+                            <div class="col-md-7">
+                                <img src="{% static 'img/offer-2.jpg' %}" class="img-fluid w-100 rounded" alt="">
+                            </div>
+                            <div class="col-md-5">
+                                <h1 class="display-5 mb-4">Доброто е част от процеса</h1>
+                                <p class="mb-4">Част от печалбата ни отива за подкрепа на благотворителни инициативи. Доброто е част от процеса.
+                                </p>
+                                <a class="btn btn-primary rounded-pill py-2 px-4" href="{% url 'contacts' %}">Научете повече</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="collapseThree" class="tab-pane fade show p-0">
+                        <div class="row g-4">
+                            <div class="col-md-7">
+                                <img src="{% static 'img/offer-3.jpg' %}" class="img-fluid w-100 rounded" alt="">
+                            </div>
+                            <div class="col-md-5">
+                                <h1 class="display-5 mb-4">Убеждаваме и вдъхновяваме.</h1>
+                                <p class="mb-4">Изграждаме дългосрочни отношения с нашите клиенти чрез доверие, прозрачност и резултати.
+                                </p>
+                                <a class="btn btn-primary rounded-pill py-2 px-4" href="{% url 'contacts' %}">Свържете се с нас</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="collapseFour" class="tab-pane fade show p-0">
+                        <div class="row g-4">
+                            <div class="col-md-7">
+                                <img src="{% static 'img/offer-4.jpg' %}" class="img-fluid w-100 rounded" alt="">
+                            </div>
+                            <div class="col-md-5">
+                                <h1 class="display-5 mb-4">Решения с човешко лице</h1>
+                                <p class="mb-4">Съчетавайки дизайн и функционалност, създаваме решения, които не само изглеждат добре, но носят ясно послание.
 
-<!-- Услуги и решения -->
-<div id="services" class="services section">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 offset-lg-2">
-        <div class="section-heading wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.5s">
-          <h4>Решения с <em>добавена стойност</em></h4>
-          <img src="{% static "images/heading-line-dec.png" %}" alt="">
-          <p>Предлагаме професионални решения за вашия бизнес, съчетавайки експертиза с устойчиво развитие</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-3">
-        <div class="service-item first-service">
-          <div class="icon">
-            <i class="fas fa-code fa-3x text-primary mb-3"></i>
-          </div>
-          <h4>Уеб разработка</h4>
-          <p>Създаване и поддръжка на модерни уеб приложения</p>
-          <ul class="list-unstyled service-features">
-            <li><i class="fas fa-check text-success me-2"></i>Съвременни технологии</li>
-            <li><i class="fas fa-check text-success me-2"></i>Responsive дизайн</li>
-            <li><i class="fas fa-check text-success me-2"></i>Мащабируеми решения</li>
-          </ul>
-          <div class="text-button">
-            <a href="#">Научете повече <i class="fa fa-arrow-right"></i></a>
-          </div>
-        </div>
-      </div>
-      
-      <div class="col-lg-3">
-        <div class="service-item second-service">
-          <div class="icon">
-            <i class="fas fa-tachometer-alt fa-3x text-primary mb-3"></i>
-          </div>
-          <h4>Оптимизация</h4>
-          <p>Подобряване на производителността и ефективността</p>
-          <ul class="list-unstyled service-features">
-            <li><i class="fas fa-check text-success me-2"></i>Бързодействие</li>
-            <li><i class="fas fa-check text-success me-2"></i>Оптимизация на код</li>
-            <li><i class="fas fa-check text-success me-2"></i>Подобрена сигурност</li>
-          </ul>
-          <div class="text-button">
-            <a href="#">Научете повече <i class="fa fa-arrow-right"></i></a>
-          </div>
-        </div>
-      </div>
-      
-      <div class="col-lg-3">
-        <div class="service-item third-service">
-          <div class="icon">
-            <i class="fas fa-headset fa-3x text-primary mb-3"></i>
-          </div>
-          <h4>Техническа поддръжка</h4>
-          <p>Надеждна поддръжка и мониторинг 24/7</p>
-          <ul class="list-unstyled service-features">
-            <li><i class="fas fa-check text-success me-2"></i>Бързи решения</li>
-            <li><i class="fas fa-check text-success me-2"></i>Проактивен мониторинг</li>
-            <li><i class="fas fa-check text-success me-2"></i>Архивиране на данни</li>
-          </ul>
-          <div class="text-button">
-            <a href="#">Научете повече <i class="fa fa-arrow-right"></i></a>
-          </div>
-        </div>
-      </div>
-      
-      <div class="col-lg-3">
-        <div class="service-item fourth-service">
-          <div class="icon">
-            <i class="fas fa-sync-alt fa-3x text-primary mb-3"></i>
-          </div>
-          <h4>Развитие на проекти</h4>
-          <p>Поддръжка и надграждане на съществуващи уеб системи</p>
-          <ul class="list-unstyled service-features">
-            <li><i class="fas fa-check text-success me-2"></i>Нови функционалности</li>
-            <li><i class="fas fa-check text-success me-2"></i>Актуализации</li>
-            <li><i class="fas fa-check text-success me-2"></i>Технически одит</li>
-          </ul>
-          <div class="text-button">
-            <a href="#">Научете повече <i class="fa fa-arrow-right"></i></a>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    <!-- Секция с въздействие -->
-    <div class="row mt-5">
-      <div class="col-lg-8 offset-lg-2 text-center">
-        <div class="impact-section p-4">
-          <h5 class="mb-4">Нашите постижения</h5>
-          <div class="row">
-            <div class="col-md-4">
-              <div class="impact-item">
-                <h3 class="text-primary">300%</h3>
-                <p>По-бързи уеб приложения</p>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="impact-item">
-                <h3 class="text-primary">99.9%</h3>
-                <p>Време на работа</p>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="impact-item">
-                <h3 class="text-primary">50%</h3>
-                <p>По-ниски разходи</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div id="about" class="about-us section">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-6 align-self-center">
-        <div class="section-heading">
-          <h4>За нашата <em>експертиза</em> и подход</h4>
-          <img src="{% static "images/heading-line-dec.png" %}" alt="">
-          <p>С опит в уеб разработката, ние сме специализирани в създаването на ефективни решения за технически предизвикателства.</p>
-        </div>
-        <div class="row">
-          <div class="col-lg-6">
-            <div class="box-item">
-              <h4><a href="#">Анализ на проблеми</a></h4>
-              <p>Задълбочен технически анализ на всеки казус</p>
-            </div>
-          </div>
-          <div class="col-lg-6">
-            <div class="box-item">
-              <h4><a href="#">Експертна поддръжка</a></h4>
-              <p>Бързи и ефективни решения на проблеми</p>
-            </div>
-          </div>
-          <div class="col-lg-6">
-            <div class="box-item">
-              <h4><a href="#">Оптимизация</a></h4>
-              <p>Подобряване на производителността</p>
-            </div>
-          </div>
-          <div class="col-lg-6">
-            <div class="box-item">
-              <h4><a href="#">Развитие</a></h4>
-              <p>Надграждане на функционалности</p>
-            </div>
-          </div>
-          <div class="col-lg-12">
-            <p>Нашият екип от опитни разработчици е готов да поеме предизвикателството на вашия проект. Предлагаме индивидуален подход и внимание към детайла при всеки казус.</p>
-            <div class="gradient-button">
-              <a href="{% url 'contacts' %}">Безплатна консултация</a>
-            </div>
-            <span>*Без обвързващи условия</span>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-6">
-        <div class="right-image">
-          <img src="{% static "images/about-right-dec.png" %}" alt="За нас">
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div id="clients" class="the-clients">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 offset-lg-2">
-        <div class="section-heading">
-          <h4>Доверието на <em>нашите клиенти</em></h4>
-          <img src="{% static "images/heading-line-dec.png" %}" alt="">
-          <p>Вижте какво споделят клиентите за работата с нас и решенията, които им предоставихме</p>
-        </div>
-      </div>
-      <div class="col-lg-12">
-        <div class="naccs">
-          <div class="grid">
-            <div class="row">
-              <div class="col-lg-7 align-self-center">
-                <div class="menu">
-                  <div class="first-thumb active">
-                    <div class="thumb">
-                      <div class="row">
-                        <div class="col-lg-4 col-sm-4 col-12">
-                          <h4>David Martino Co</h4>
-                          <span class="date">30 November 2021</span>
+                                </p>
+                                <a class="btn btn-primary rounded-pill py-2 px-4" href="{% url 'contacts' %}">Научете повече</a>
+                            </div>
                         </div>
-                        <div class="col-lg-4 col-sm-4 d-none d-sm-block">
-                          <span class="category">Financial Apps</span>
-                        </div>
-                        <div class="col-lg-4 col-sm-4 col-12">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <span class="rating">4.8</span>
-                        </div>
-                      </div>
                     </div>
-                  </div>
-                  <div>
-                    <div class="thumb">
-                      <div class="row">
-                        <div class="col-lg-4 col-sm-4 col-12">
-                          <h4>Jake Harris Nyo</h4>
-                          <span class="date">29 November 2021</span>
-                        </div>
-                        <div class="col-lg-4 col-sm-4 d-none d-sm-block">
-                          <span class="category">Digital Business</span>
-                        </div>
-                        <div class="col-lg-4 col-sm-4 col-12">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <span class="rating">4.5</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div>
-                    <div class="thumb">
-                      <div class="row">
-                        <div class="col-lg-4 col-sm-4 col-12">
-                          <h4>May Catherina</h4>
-                          <span class="date">27 November 2021</span>
-                        </div>
-                        <div class="col-lg-4 col-sm-4 d-none d-sm-block">
-                          <span class="category">Business &amp; Economics</span>
-                        </div>
-                        <div class="col-lg-4 col-sm-4 col-12">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <span class="rating">4.7</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div>
-                    <div class="thumb">
-                      <div class="row">
-                        <div class="col-lg-4 col-sm-4 col-12">
-                          <h4>Random User</h4>
-                          <span class="date">24 November 2021</span>
-                        </div>
-                        <div class="col-lg-4 col-sm-4 d-none d-sm-block">
-                          <span class="category">New App Ecosystem</span>
-                        </div>
-                        <div class="col-lg-4 col-sm-4 col-12">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <span class="rating">3.9</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="last-thumb">
-                    <div class="thumb">
-                      <div class="row">
-                        <div class="col-lg-4 col-sm-4 col-12">
-                          <h4>Mark Amber Do</h4>
-                          <span class="date">21 November 2021</span>
-                        </div>
-                        <div class="col-lg-4 col-sm-4 d-none d-sm-block">
-                          <span class="category">Web Development</span>
-                        </div>
-                        <div class="col-lg-4 col-sm-4 col-12">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <span class="rating">4.3</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
                 </div>
-              </div> 
-              <div class="col-lg-5">
-                <ul class="nacc">
-                  <li class="active">
-                    <div>
-                      <div class="thumb">
-                        <div class="row">
-                          <div class="col-lg-12">
-                            <div class="client-content">
-                              <img src="{% static "images/quote.png" %}" alt="">
-                              <p>"Lorem ipsum dolor sit amet, consectetur adpiscing elit, sed do eismod tempor idunte ut labore et dolore magna aliqua darwin kengan
-                                lorem ipsum dolor sit amet, consectetur picing elit massive big blasta."</p>
-                            </div>
-                            <div class="down-content">
-                              <img src="{% static "images/client-image.jpg" %}" alt="">
-                              <div class="right-content">
-                                <h4>David Martino</h4>
-                                <span>CEO of David Company</span>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-                  <li>
-                    <div>
-                      <div class="thumb">
-                        <div class="row">
-                          <div class="col-lg-12">
-                            <div class="client-content">
-                              <img src="{% static "images/quote.png" %}" alt="">
-                              <p>"CTO, Lorem ipsum dolor sit amet, consectetur adpiscing elit, sed do eismod tempor idunte ut labore et dolore magna aliqua darwin kengan
-                                lorem ipsum dolor sit amet, consectetur picing elit massive big blasta."</p>
-                            </div>
-                            <div class="down-content">
-                              <img src="{% static "images/client-image.jpg" %}" alt="">
-                              <div class="right-content">
-                                <h4>Jake H. Nyo</h4>
-                                <span>CTO of Digital Company</span>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-                  <li>
-                    <div>
-                      <div class="thumb">
-                        <div class="row">
-                          <div class="col-lg-12">
-                            <div class="client-content">
-                              <img src="{% static "images/quote.png" %}" alt="">
-                              <p>"May, Lorem ipsum dolor sit amet, consectetur adpiscing elit, sed do eismod tempor idunte ut labore et dolore magna aliqua darwin kengan
-                                lorem ipsum dolor sit amet, consectetur picing elit massive big blasta."</p>
-                            </div>
-                            <div class="down-content">
-                              <img src="{% static "images/client-image.jpg" %}" alt="">
-                              <div class="right-content">
-                                <h4>May C.</h4>
-                                <span>Founder of Catherina Co.</span>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-                  <li>
-                    <div>
-                      <div class="thumb">
-                        <div class="row">
-                          <div class="col-lg-12">
-                            <div class="client-content">
-                              <img src="{% static "images/quote.png" %}" alt="">
-                              <p>"Lorem ipsum dolor sit amet, consectetur adpiscing elit, sed do eismod tempor idunte ut labore et dolore magna aliqua darwin kengan
-                                lorem ipsum dolor sit amet, consectetur picing elit massive big blasta."</p>
-                            </div>
-                            <div class="down-content">
-                              <img src="{% static "images/client-image.jpg" %}" alt="">
-                              <div class="right-content">
-                                <h4>Random Staff</h4>
-                                <span>Manager, Digital Company</span>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-                  <li>
-                    <div>
-                      <div class="thumb">
-                        <div class="row">
-                          <div class="col-lg-12">
-                            <div class="client-content">
-                              <img src="{% static "images/quote.png" %}" alt="">
-                              <p>"Mark, Lorem ipsum dolor sit amet, consectetur adpiscing elit, sed do eismod tempor idunte ut labore et dolore magna aliqua darwin kengan
-                                lorem ipsum dolor sit amet, consectetur picing elit massive big blasta."</p>
-                            </div>
-                            <div class="down-content">
-                              <img src="{% static "images/client-image.jpg" %}" alt="">
-                              <div class="right-content">
-                                <h4>Mark Am</h4>
-                                <span>CTO, Amber Do Company</span>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-                </ul>
-              </div>          
             </div>
-          </div>
         </div>
-      </div>
     </div>
-  </div>
 </div>
+<!-- Нашите предимства End -->
 
-<!-- <div id="pricing" class="pricing-tables">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 offset-lg-2">
-        <div class="section-heading">
-          <h4>We Have The Best Pre-Order <em>Prices</em> You Can Get</h4>
-          <img src="{% static "images/heading-line-dec.png" %}" alt="">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eismod tempor incididunt ut labore et dolore magna.</p>
+<!-- Активни проекти Start -->
+<div class="container-fluid team pb-5" id="projects">
+    <div class="container pb-5">
+        <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+            <h4 class="text-primary">Активни каузи, които правят разлика</h4>
+            <h1 class="display-5 mb-4">Текущи проекти</h1>
+            <p class="mb-0">Всеки проект е стъпка към по-добро бъдеще.
+            </p>
         </div>
-      </div>
-      <div class="col-lg-4">
-        <div class="pricing-item-regular">
-          <span class="price">$12</span>
-          <h4>Standard Plan App</h4>
-          <div class="icon">
-            <img src="{% static "images/pricing-table-01.png" %}" alt="">
-          </div>
-          <ul>
-            <li>Lorem Ipsum Dolores</li>
-            <li>20 TB of Storage</li>
-            <li class="non-function">Life-time Support</li>
-            <li class="non-function">Premium Add-Ons</li>
-            <li class="non-function">Fastest Network</li>
-            <li class="non-function">More Options</li>
-          </ul>
-          <div class="border-button">
-            <a href="#">Purchase This Plan Now</a>
-          </div>
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.2s">
+                <div class="team-item">
+                    <div class="team-img">
+                        <img src="{% static 'img/project-1.png' %}" class="img-fluid" alt="">
+                    </div>
+                    <div class="team-title">
+                        <h4 class="mb-0">Платформа за обмен на услуги</h4>
+                        <p class="mb-0">Уеб приложение</p>
+                    </div>
+                    <div class="team-icon">
+                        <a class="btn btn-primary btn-sm-square rounded-circle me-3" href="https://www.facebook.com/mysitebg1"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-primary btn-sm-square rounded-circle me-3" href="https://www.linkedin.com/company/mysite-bg"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.4s">
+                <div class="team-item">
+                    <div class="team-img">
+                        <img src="{% static 'img/project-2.png' %}" class="img-fluid" alt="">
+                    </div>
+                    <div class="team-title">
+                        <h4 class="mb-0">Платформа за менторство и консултации:</h4>
+                        <p class="mb-0">Уеб приложение</p>
+                    </div>
+                    <div class="team-icon">
+                        <a class="btn btn-primary btn-sm-square rounded-circle me-3" href="https://www.facebook.com/mysitebg1"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-primary btn-sm-square rounded-circle me-3" href="https://www.linkedin.com/company/mysite-bg"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.6s">
+                <div class="team-item">
+                    <div class="team-img">
+                        <img src="{% static 'img/project-3.png' %}" class="img-fluid" alt="">
+                    </div>
+                    <div class="team-title">
+                        <h4 class="mb-0">Помощ за животни в нужда</h4>
+                        <p class="mb-0">Уеб сайт</p>
+                    </div>
+                    <div class="team-icon">
+                        <a class="btn btn-primary btn-sm-square rounded-circle me-3" href="https://www.facebook.com/mysitebg1"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-primary btn-sm-square rounded-circle me-3" href="https://www.linkedin.com/company/mysite-bg"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="col-lg-4">
-        <div class="pricing-item-pro">
-          <span class="price">$25</span>
-          <h4>Business Plan App</h4>
-          <div class="icon">
-            <img src="{% static "images/pricing-table-01.png" %}" alt="">
-          </div>
-          <ul>
-            <li>Lorem Ipsum Dolores</li>
-            <li>50 TB of Storage</li>
-            <li>Life-time Support</li>
-            <li>Premium Add-Ons</li>
-            <li class="non-function">Fastest Network</li>
-            <li class="non-function">More Options</li>
-          </ul>
-          <div class="border-button">
-            <a href="#">Purchase This Plan Now</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4">
-        <div class="pricing-item-regular">
-          <span class="price">$66</span>
-          <h4>Premium Plan App</h4>
-          <div class="icon">
-            <img src="{% static "images/pricing-table-01.png" %}" alt="">
-          </div>
-          <ul>
-            <li>Lorem Ipsum Dolores</li>
-            <li>120 TB of Storage</li>
-            <li>Life-time Support</li>
-            <li>Premium Add-Ons</li>
-            <li>Fastest Network</li>
-            <li>More Options</li>
-          </ul>
-          <div class="border-button">
-            <a href="#">Purchase This Plan Now</a>
-          </div>
-        </div>
-      </div>
     </div>
-  </div>
-</div>  -->
+</div>
+<!-- Активни проекти End -->
 
 {% endblock %}
 

@@ -1,15 +1,17 @@
 {% extends "layouts/a.html" %}
 {% load static %}
 
+{% block header %}
+    {% include "includes/header_min.html" %}
+{% endblock %}
+
 {% block content %}
-<div id="use-case" class="use-case section">
+<div id="contacts" class="contacts section">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 offset-lg-2">
                 <div class="section-heading  wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.5s">
-                    <h4 class="mt-5 text-center">Контакти</h4>
                     <div class="text-center">
-                        <img src="{% static 'images/heading-line-dec.png' %}" alt="">
                         <p class="mt-5">Моля, използвайте формуляра по-долу за връзка с нас.</p>
                         <p>Ако имате въпроси или нужда от помощ, не се колебайте да ни пишете.</p>
                     </div>
@@ -18,7 +20,7 @@
         </div>
 
         <div class="row">
-            <div class="col-lg-4 offset-lg-4 mt-5">
+            <div class="col-lg-4 offset-lg-4 mt-5 mb-5">
                 <form method="post" class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
                     {% csrf_token %}
                     {% for field in form %}
